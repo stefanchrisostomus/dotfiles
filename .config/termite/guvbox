@@ -1,0 +1,82 @@
+[options]
+allow_bold = true
+audible_bell = false
+clickable_url = true
+dynamic_title = true
+font = Cousine Nerd Font 8
+#fullscreen = true
+#geometry = 640x480
+icon_name = termite
+mouse_autohide = true
+#scroll_on_output = false
+#scroll_on_keystroke = true
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# and setting it to a negative value means "infinite scrollback"
+scrollback_lines = 5000 #search_wrap = true
+#urgent_on_bell = true
+hyperlinks = true
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+browser = qutebrowser
+
+# "system", "on" or "off"
+cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = block
+
+# Hide links that are no longer valid in url select overlay mode
+#filter_unmatched_urls = true
+
+# Emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+# set size hints for the window
+#size_hints = false
+
+# "off", "left" or "right"
+scrollbar = off
+
+## My colors
+[colors]
+
+background = rgba(40, 33, 22, 0.95)
+
+# special
+foreground      = #8a8986
+foreground_bold = #8a8986
+cursor          = #8a8986
+# background      = #504136
+
+# black
+color0  = #504136
+color8  = #666666
+
+# red
+color1  = #cf6a4c
+color9  = #cf6a4c
+
+# green
+color2  = #7dc54e
+color10 = #7dc54e
+
+# yellow
+color3  = #f9ee98
+color11 = #f9ee98
+
+# blue
+color4  = #73ace2
+color12 = #73ace2
+
+# magenta
+color5  = #9b859d
+color13 = #9b859d
+
+# cyan
+color6  = #afc4db
+color14 = #afc4db
+
+# white
+color7  = #8a8986
+color15 = #baae9e
+
