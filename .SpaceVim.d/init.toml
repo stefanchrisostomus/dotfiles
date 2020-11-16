@@ -24,6 +24,14 @@
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
 
+# Choose file manager
+#[options]
+    # file manager plugins supported in SpaceVim:
+    # - vimfiler (default)
+    # - nerdtree
+    # - defx
+    filemanager = "vimfiler"
+
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
@@ -64,6 +72,14 @@ merged = 0
 [[custom_plugins]]
     repo = "skammer/vim-css-color"
     merged = false
+
+[[custom_plugins]]
+    repo = "francoiscabrol/ranger.vim"
+    merged = false
     
 g:spacevim_enable_colorizer = 0
 g:spacevim_enable_vim-css-color = 1
+g:choosewin_overlay_enable = 1
+g:ranger_map_keys = 0
+enable_vimfiler_gitstatus = true
+g:ranger_replace_netrw = 1

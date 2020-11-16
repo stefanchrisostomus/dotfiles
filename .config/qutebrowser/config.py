@@ -321,16 +321,20 @@ c.colors.tabs.selected.even.bg = base02
 ## config.bind('<Ctrl-Shift-y>', 'hint links spawn --detach mpv --force-window yes {hint-url}')
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
+config.bind("xa", "spawn --userscript youtube_mp3_downloader.sh")
+config.bind("Xa", "hint links userscript youtube_mp3_downloader.sh")
+config.bind("xv", "spawn --userscript youtube_downloader.sh")
+config.bind("Xv", "hint links userscript youtube_downloader.sh")
 
 c.auto_save.session = True
 
 # disable insert mode completely
-c.input.insert_mode.auto_enter = False
-c.input.insert_mode.auto_leave = False
-c.input.insert_mode.plugins = False
+c.input.insert_mode.auto_enter = True 
+c.input.insert_mode.auto_leave = True
+c.input.insert_mode.plugins = True
 
 ## Need QT 5.10; Ubuntu 18.04 is on 5.9.5
-c.content.autoplay = False
+c.content.autoplay = True 
 
 ## List of URLs of lists which contain hosts to block.  The file can be
 ## in one of the following formats:  - An `/etc/hosts`-like file - One
@@ -338,3 +342,8 @@ c.content.autoplay = False
 ## file, or a file   named `hosts` (with any extension).
 ## Type: List of Url
 c.content.host_blocking.lists = ['https://www.malwaredomainlist.com/hostslist/hosts.txt', 'http://someonewhocares.org/hosts/hosts', 'http://winhelp2002.mvps.org/hosts.zip', 'http://malwaredomains.lehigh.edu/files/justdomains.zip', '    https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext']
+c.tabs.new_position.related = "last" 
+c.content.webgl = True
+c.completion.show = "always"
+c.content.javascript.can_open_tabs_automatically
+c.content.javascript.enabled = True
