@@ -37,6 +37,9 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
+  name = "sudo"
+
+[[layers]]
   name = "autocomplete"
 
 # custom plugins {{{
@@ -58,4 +61,9 @@ merged = 0
     repo = "lilydjwg/colorizer"
     merged = false
 
-g:spacevim_enable_colorizer = 1
+[[custom_plugins]]
+    repo = "skammer/vim-css-color"
+    merged = false
+    
+g:spacevim_enable_colorizer = 0
+g:spacevim_enable_vim-css-color = 1
