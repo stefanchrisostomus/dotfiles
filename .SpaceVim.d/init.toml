@@ -29,6 +29,7 @@
 name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "smart"
+autocomplete_method = "ycm"
 
 [[layers]]
 name = 'shell'
@@ -47,3 +48,14 @@ merged = 0
 [[custom_plugins]]
   repo = "arcticicestudio/nord-vim"
   merged = 0
+
+
+[[custom_plugins]]
+  repo = "oblitum/youcompleteme"
+  merged = 0
+
+[[custom_plugins]]
+    repo = "lilydjwg/colorizer"
+    merged = false
+
+g:spacevim_enable_colorizer = 1

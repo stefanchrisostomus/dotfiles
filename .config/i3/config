@@ -423,7 +423,7 @@ font pango:Cousine Nerd Font Regular 8
 #assign [class="Vlc|vlc"]                                                            → 6
 
 # Workspace 7 video
-assign [class="mpv|vlc"] 				                                                   	    → $ws7
+# assign [class="mpv|vlc"] 				                                                   	    → $ws7
 
 # Workspace 8 Music
 assign [class="moc"]                                                                  → 8

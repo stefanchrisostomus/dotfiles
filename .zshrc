@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 alias c='clear && colorscript -e elfman'
 alias speed='speedtest-cli'
 alias home='cd /home/stefan/'
-alias dh='cd /home/stefan/Desktop/'
+alias dk='cd /home/stefan/Desktop/'
 alias dc='cd /home/stefan/Documents/'
 alias gh='cd /home/stefan/Documents/github/'
 alias dw='cd /home/stefan/Downloads/'
