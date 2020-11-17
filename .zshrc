@@ -112,8 +112,8 @@ alias dk='cd /home/stefan/Desktop/'
 alias dc='cd /home/stefan/Documents/'
 alias dot='cd ~/Documents/github/dotfiles'
 alias gi='cd /home/stefan/Documents/github/'
-alias do='cd /home/stefan/Downloads/'
-alias vw='cd /home/stefan/Documents/github/vimwiki/'
+alias wiki='vim /home/stefan/Documents/github/vimwiki/index.wiki'
+alias dw='cd ~/Downloads'
 alias cf='cd /home/stefan/.config'
 alias lg='lazygit'
 alias wl 'cd ~/Pictures/Wallpapers'
@@ -141,3 +141,11 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export NNN_TRASH=1    # trash (needs trash-cli) instead of delete
 
+# set vim as manpager
+export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
+
+# Reload .zshrc
+function reload(){
+       source ~/.zshrc
+       source ~/.zshenv
+   }
