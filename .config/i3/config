@@ -160,11 +160,11 @@ for_window [class="mpv"] focus
 
 # start dmenu
 # bindsym $mod+d exec --no-startup-id dmenu_run -i -h 24 -nb '#2E3440' -nf '#D08770' -sb '#8FBCBB' -sf '#191919'  -fn 'CousineNerdFontRegular:bold:pixelsize=10'
-# bindsym $mod+d exec --no-startup-id dmenu_run -c -l 20 -nb '#2E3440' -nf '#D08770' -sb '#8FBCBB' -sf '#191919'j
-# bindsym $mod+d exec --no-startup-id dmenu_run
+# bindsym $mod+d exec --no-startup-id dmenu_run -c -l 20 -nb '#2E3440' -nf '#D08770' -sb '#8FBCBB' -sf '#191919'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'CousineNerdFontRegular:pixelsize=10'
 
 # gmrun
-bindsym mod1+F2 exec --no-startup-id gmrun@
+bindsym mod1+F2 exec --no-startup-id gmrun
 
 # start xfce-appfinder
 bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
@@ -173,20 +173,20 @@ bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
 bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
 
 # start rofi small
-bindsym $mod+d exec --no-startup-id "rofi -show run -font \\"Cousine Nerd Font 8\\"
+# bindsym $mod+d exec --no-startup-id "rofi -show run -font \\"Cousine Nerd Font 8\\"
 # bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort > /dev/null"
-bindsym $mod+i exec --no-startup-id rofi -modi lpass:rofi-lpass -show lpass -font \\"Cousine Nerd Font 8\\"
-bindsym $mod+p exec --no-startup-id rofi-pass -show run
+# bindsym $mod+i exec --no-startup-id rofi -modi lpass:rofi-lpass -show lpass -font \\"Cousine Nerd Font 8\\"
+# bindsym $mod+p exec --no-startup-id rofi-pass -show run
 #####################################################################################################################
 #################                          dmenu shortcuts                                          #################
 #####################################################################################################################
-bindsym ctrl+i exec dmenufm
-bindsym ctrl+o exec --no-startup-id ~/Documents/scripts/dmenu_bash
+# bindsym ctrl+i exec dmenufm
+# bindsym ctrl+o exec --no-startup-id ~/Documents/scripts/dmenu_bash
 # bindsym ctrl+z exec ~/Documents/scripts/dmenu_web
-bindsym ctrl+u exec --no-startup-id ~/Documents/scripts/dmenu_workspaces
-bindsym Shift+$mod+o exec --no-startup-id clipmenu -i -fn Terminus:size=8 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1'
-bindsym Shift+$mod+i exec--no-startup-id  clipmenud
-bindsym ctrl+y exec --no-startup-id ~/.local/bin/ytdl-mpv.sh -v
+# bindsym ctrl+u exec --no-startup-id ~/Documents/scripts/dmenu_workspaces
+# bindsym Shift+$mod+o exec --no-startup-id clipmenu -i -fn Terminus:size=8 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93a1a1'
+# bindsym Shift+$mod+i exec--no-startup-id  clipmenud
+# bindsym ctrl+y exec --no-startup-id ~/.local/bin/ytdl-mpv.sh -v
 
 #####################################################################################################################
 #################                           App shortcuts                                           #################
