@@ -147,5 +147,4 @@ export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomo
 # Reload .zshrc
 function reload(){
        source ~/.zshrc
-       source ~/.zshenv
    }

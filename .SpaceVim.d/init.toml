@@ -49,6 +49,9 @@ default_height = 30
 
 [[layers]]
   name = "autocomplete"
+  
+[[layers]]
+  name = "colorhighlight"
 
 # custom plugins {{{
 [[custom_plugins]]
@@ -76,9 +79,9 @@ merged = 0
 [[custom_plugins]]
     repo = "francoiscabrol/ranger.vim"
     merged = false
-    
+
 g:spacevim_enable_colorizer = 0
-g:spacevim_enable_vim-css-color = 1
+g:spacevim_enable_vim-css-color = 0
 g:choosewin_overlay_enable = 1
 g:ranger_map_keys = 0
 enable_vimfiler_gitstatus = true
