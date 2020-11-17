@@ -10,3 +10,6 @@ git-annex https://git-annex.branchable.com/
 mail https://outlook.live.com/mail/0/inbox/id/AQQkADAwATZiZmYAZC1kYzM2LWI0MDItMDACLTAwCgAQAAyucsYciWVKpgvqMbypsww%3D
 mutt https://linuxconfig.org/how-to-install-configure-and-use-mutt-with-a-gmail-account-on-linux
 unixporn https://www.reddit.com/r/unixporn/wiki/links/external
+base16 qute https://github.com/theova/base16-qutebrowser
+base16 termite https://github.com/khamer/base16-termite
+pass config https://droidrant.com/notes-pass-unix-password-manager/#Step_4_%E2%80%93_Initialising_Pass

@@ -93,7 +93,7 @@ settings:
   tabs.position:
     global: top
   tabs.show:
-    global: switching
+    global: always
   tabs.show_switching_delay:
     global: 1000
   url.default_page:

@@ -176,7 +176,7 @@ bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto San
 bindsym $mod+d exec --no-startup-id "rofi -show run -font \\"Cousine Nerd Font 8\\"
 # bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort > /dev/null"
 bindsym $mod+i exec --no-startup-id rofi -modi lpass:rofi-lpass -show lpass -font \\"Cousine Nerd Font 8\\"
-
+bindsym $mod+p exec --no-startup-id rofi-pass -show run
 #####################################################################################################################
 #################                          dmenu shortcuts                                          #################
 #####################################################################################################################
@@ -515,7 +515,7 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 #feh sets wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/viva.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/0258.jpg
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
@@ -523,11 +523,12 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh &
 #################                                 system applications                               #################
 #####################################################################################################################
 
-exec --no-startup-id xfce4-power-manager &
+ exec --no-startup-id xfce4-power-manager &
 # ommitted next line to get super key to bring up the menu in xfce and avoid error then in i3
 # IF xfsettingsd is activated you can not change themes
 #exec --no-startup-id xfsettingsd &
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+# exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+exec_always --no-startup-id dunst
 
 #####################################################################################################################
 #################                          applications keyboard shortcuts                          #################
@@ -646,7 +647,7 @@ bindsym control+mod1+s exec --no-startup-id spotify;focus
 
 
 bindsym mod1+p exec --no-startup-id scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
-bindsym Control+p exec --no-startup-id xfce4-screenshooter
+# bindsym mod1+Control+p exec --no-startup-id xfce4-screenshooter
 bindsym mod1+r exec --no-startup-id gnome-screenshot -i
 #bindsym shift+Print exec --no-startup-id shutter
 
