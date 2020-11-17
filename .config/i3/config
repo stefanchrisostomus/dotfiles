@@ -451,6 +451,9 @@ exec --no-startup-id dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 # Autotiling
 exec_always --no-startup-id autotiling
 
+# Blueman
+exec_always --no-startup-id blueman-applet
+
 #browser
 #exec --no-startup-id vivaldi-stable
 # for_window [class="Vivaldi-stable"] focus

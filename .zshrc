@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-path=('/home/stefan/Documents/scripts' $path)
+path=('/home/stefan/Documents/github/scripts' $path)
 path=('/home/stefan/.local/bin' $path)
 
 if [ -d "$HOME/.local/bin" ] ; then
