@@ -124,6 +124,24 @@ alias rr='. ranger'
 alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
 
+# yay as aur helper - updates everything
+alias pksyua="yay -Syu --noconfirm"
+alias upall="yay -Syu --noconfirm"
+
+#Recent Installed Packages
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
+
+#gpg
+#verify signature for isos
+alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
+#receive the key of a developer
+alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+
+#shutdown or reboot
+alias ssn="sudo shutdown now"
+alias sr="sudo reboot"
+
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --icons --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --icons  --group-directories-first'  # all files and dirs
@@ -131,10 +149,10 @@ alias ll='exa -l --color=always --icons  --group-directories-first'  # long form
 alias lt='exa -aT --color=always --icons  --group-directories-first' # tree listing
 
 # pfetch
-colorscript -e elfman
+# colorscript -e elfman
 
 export EDITOR=vim
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -148,3 +166,13 @@ export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomo
 function reload(){
        source ~/.zshrc
    }
+
+ if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
+
+export VISUAL=vim
+export PAGER=more
+
+# if [[ $TERM == xterm-termite ]]; then
+#   . /etc/profile.d/vte.sh
+#   __vte_osc7
+# fi

@@ -10,8 +10,6 @@ settings:
     global:
       normal:
         ',m': hint links spawn --detach mpv --force-window yes {hint-url}
-        <Ctrl+Shift+y>: hint links spawn --detach mpv --force-window yes {hint-url}
-        '@xt': config-cycle tabs.show always switching
         J: tab-prev
         K: tab-next
         xt: config-cycle tabs.show always switching
@@ -93,7 +91,7 @@ settings:
   tabs.position:
     global: top
   tabs.show:
-    global: always
+    global: switching
   tabs.show_switching_delay:
     global: 1000
   url.default_page:

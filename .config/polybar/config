@@ -231,8 +231,8 @@ separator = |
 ;tray-background = ${colors.background}
 
 #i3: Make the bar appear below windows
-;wm-restack = i3
-;override-redirect = true
+wm-restack = i3
+; override-redirect = false
 
 ; Enable support for inter-process messaging
 ; See the Messaging wiki page for more details.

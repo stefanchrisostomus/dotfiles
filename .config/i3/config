@@ -176,7 +176,7 @@ bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto San
 # bindsym $mod+d exec --no-startup-id "rofi -show run -font \\"Cousine Nerd Font 8\\"
 # bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort > /dev/null"
 # bindsym $mod+i exec --no-startup-id rofi -modi lpass:rofi-lpass -show lpass -font \\"Cousine Nerd Font 8\\"
-# bindsym $mod+p exec --no-startup-id rofi-pass -show run
+# bindsym $mod+p exec --no-startup-id "rofi-pass -show run
 #####################################################################################################################
 #################                          dmenu shortcuts                                          #################
 #####################################################################################################################
@@ -849,6 +849,8 @@ popup_during_fullscreen smart
 for_window [class="^.*"] border pixel 2
 gaps inner 9
 gaps outer 4
+gaps top 12
+gaps bottom 12
 #smart_gaps on
 #smart_borders on
 
