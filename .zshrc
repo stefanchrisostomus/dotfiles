@@ -14,7 +14,7 @@ export ZSH="/home/stefan/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="duellj"
+ZSH_THEME="aussiegeek"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # My Aliases
-alias c='clear && colorscript -e elfman'
+alias c='clear'
 alias speed='speedtest-cli'
 alias home='cd /home/stefan/'
 alias dk='cd /home/stefan/Desktop/'
@@ -148,8 +148,9 @@ alias la='exa -a --color=always --icons  --group-directories-first'  # all files
 alias ll='exa -l --color=always --icons  --group-directories-first'  # long format
 alias lt='exa -aT --color=always --icons  --group-directories-first' # tree listing
 
-# pfetch
-# colorscript -e elfman
+### RANDOM COLOR SCRIPT ###
+/opt/shell-color-scripts/colorscript.sh random
+
 
 export EDITOR=vim
 

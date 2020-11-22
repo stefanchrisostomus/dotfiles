@@ -424,7 +424,7 @@ font pango:Cousine Nerd Font Regular 8
 #assign [class="Vlc|vlc"]                                                            → 6
 
 # Workspace 7 video
-assign [class="mpv|vlc"] 				                                                   	    → $ws7
+# assign [class="mpv|vlc"] 				                                                   	    → $ws7
 
 # Workspace 8 Music
 assign [class="moc"]                                                                  → 8
@@ -515,7 +515,7 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 #feh sets wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/0258.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/00258.jpg
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
