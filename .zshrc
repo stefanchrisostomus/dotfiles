@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # My Aliases
-alias c='clear'
+alias c='clear && /opt/shell-color-scripts/colorscript.sh -e elfman'
 alias speed='speedtest-cli'
 alias home='cd /home/stefan/'
 alias dk='cd /home/stefan/Desktop/'
@@ -149,7 +149,7 @@ alias ll='exa -l --color=always --icons  --group-directories-first'  # long form
 alias lt='exa -aT --color=always --icons  --group-directories-first' # tree listing
 
 ### RANDOM COLOR SCRIPT ###
-/opt/shell-color-scripts/colorscript.sh random
+/opt/shell-color-scripts/colorscript.sh -e elfman 
 
 
 export EDITOR=vim

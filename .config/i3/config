@@ -515,7 +515,7 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 #feh sets wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/00258.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/0074.jpg
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
@@ -849,8 +849,6 @@ popup_during_fullscreen smart
 for_window [class="^.*"] border pixel 2
 gaps inner 9
 gaps outer 4
-gaps top 12
-gaps bottom 12
 #smart_gaps on
 #smart_borders on
 
