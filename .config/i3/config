@@ -161,7 +161,7 @@ for_window [class="mpv"] focus
 # start dmenu
 # bindsym $mod+d exec --no-startup-id dmenu_run -i -h 24 -nb '#2E3440' -nf '#D08770' -sb '#8FBCBB' -sf '#191919'  -fn 'CousineNerdFontRegular:bold:pixelsize=10'
 # bindsym $mod+d exec --no-startup-id dmenu_run -c -l 20 -nb '#2E3440' -nf '#D08770' -sb '#8FBCBB' -sf '#191919'
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'CousineNerdFontRegular:pixelsize=10'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'CousineNerdFontRegular:pixelsize=11'
 
 # gmrun
 bindsym mod1+F2 exec --no-startup-id gmrun
@@ -427,7 +427,7 @@ font pango:Cousine Nerd Font Regular 8
 # assign [class="mpv|vlc"] 				                                                   	    → $ws7
 
 # Workspace 8 Music
-assign [class="moc"]                                                                  → 8
+# assign [class="moc"]                                                                  → 8
 
 # Workspace 9 email clients
 #assign [class="Geary|Evolution"]                                                    → 9

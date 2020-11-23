@@ -62,7 +62,7 @@ image/*; devour curl -s '%s' | convert -resize 80x80 - jpg:/tmp/ttrv.jpg && img2
 image/*; devour  curl -s '%s' | convert - jpg:/tmp/ttrv.jpg && img2txt -f utf8 /tmp/ttrv.jpg; needsterminal; copiousoutput
 
 # Full motion videos - requires a framebuffer to view
-video/x-youtube; mpv -vo drm -quiet '%s'; needsterminal
+video/x-youtube; devour mpv -vo drm -quiet '%s'; needsterminal
 video/*; devour mpv -vo drm -quiet '%s'; needsterminal
 
 # Ascii videos
