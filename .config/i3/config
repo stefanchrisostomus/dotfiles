@@ -160,8 +160,9 @@ for_window [class="mpv"] focus
 
 # start dmenu
 # bindsym $mod+d exec --no-startup-id dmenu_run -i -h 24 -nb '#2E3440' -nf '#D08770' -sb '#8FBCBB' -sf '#191919'  -fn 'CousineNerdFontRegular:bold:pixelsize=10'
-# bindsym $mod+d exec --no-startup-id dmenu_run -c -l 20 -nb '#2E3440' -nf '#D08770' -sb '#8FBCBB' -sf '#191919'
-# bindsym $mod+d exec --no-startup-id dmenu_run -fn 'CousineNerdFontRegular:pixelsize=11'
+# bindsym $mod+d exec --no-startup-id dmenu_run -bw 2 -h 18 -i  -c  -l 20  -nb '#2E3440' -nf '#D08770' -sb '#88C0D0' -sf '#191919' -fn 'CousineNerdFontRegular:pixelsize=10'
+#  bindsym $mod+d exec --no-startup-id dmenu_run  -fn 'CousineNerdFontRegular:pixelsize=11'
+# bindsym $mod+d exec --no-startup-id dmenu_run
 
 # gmrun
 bindsym mod1+F2 exec --no-startup-id gmrun
@@ -173,8 +174,10 @@ bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
 bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
 
 # start rofi small
-bindsym $mod+d exec --no-startup-id "rofi -show run -font \\"Cousine Nerd Font 8\\"
-bindsym $mod+w exec --no-startup-id /usr/local/bin/i3_switch_workspace.sh
+bindsym $mod+d exec --no-startup-id rofi -show run   $HOME/.config/rofi/config.rasi
+# bindsym $mod+d exec --no-startup-id "rofi -show run -font \\"Cousine Nerd Font 8\\"
+# bindsym $mod+w exec --no-startup-id /usr/local/bin/i3_switch_workspace.sh
+# bindsym $mod+p exec --no-startup-id ~/Documents/github/scripts/power.sh
 #####################################################################################################################
 #################                          dmenu shortcuts                                          #################
 #####################################################################################################################

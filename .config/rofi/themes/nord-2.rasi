@@ -4,29 +4,6 @@
  * Copyright: 2018 INTRCPTR
  ***********************************************/
 //----------------------
-// Configuration
-//----------------------
-
-configuration {
-	modi: 			"run,drun";
-  font: "Cousine Nerd Font 8";
-	width: 			750;
-	lines: 			10;
-	show-match: 		false;
-	separator-style: 	"solid";
-	hide-scrollbar: 	true;
-  sidebar-mode: true;
-  sort: true;
-  kb-row-up:                      "Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab";
-  kb-row-down:                    "Down,Control+j";
-  kb-accept-entry:                "Control+m,Return,KP_Enter";
-  kb-remove-to-eol:               "Control+Shift+e";
-  kb-mode-next:                   "Shift+Right,Control+Tab,Control+l";
-  kb-mode-previous:               "Shift+Left,Control+Shift+Tab,Control+h";
-  kb-remove-char-back:            "BackSpace";
-	}
-
-//----------------------
 // Theme Settings
 //----------------------
 
