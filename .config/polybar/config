@@ -42,7 +42,7 @@ format-offset =
 ; Nord theme ============
 background = #2E3440
 foreground = #f3f4f5
-alert = #d08770
+alert = #D08770
 volume-min = #a3be8c
 volume-med = #ebcb8b
 volume-max = #bf616a
@@ -996,7 +996,7 @@ label-mode-background = #FFBB00
 label-focused = %icon% %name%
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
-label-focused-underline = #81A1C1
+label-focused-underline = #88C0D0
 label-focused-padding = 2
 
 ; Available tokens:

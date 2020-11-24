@@ -161,7 +161,7 @@ for_window [class="mpv"] focus
 # start dmenu
 # bindsym $mod+d exec --no-startup-id dmenu_run -i -h 24 -nb '#2E3440' -nf '#D08770' -sb '#8FBCBB' -sf '#191919'  -fn 'CousineNerdFontRegular:bold:pixelsize=10'
 # bindsym $mod+d exec --no-startup-id dmenu_run -c -l 20 -nb '#2E3440' -nf '#D08770' -sb '#8FBCBB' -sf '#191919'
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'CousineNerdFontRegular:pixelsize=11'
+# bindsym $mod+d exec --no-startup-id dmenu_run -fn 'CousineNerdFontRegular:pixelsize=11'
 
 # gmrun
 bindsym mod1+F2 exec --no-startup-id gmrun
@@ -173,10 +173,8 @@ bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
 bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
 
 # start rofi small
-# bindsym $mod+d exec --no-startup-id "rofi -show run -font \\"Cousine Nerd Font 8\\"
-# bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort > /dev/null"
-# bindsym $mod+i exec --no-startup-id rofi -modi lpass:rofi-lpass -show lpass -font \\"Cousine Nerd Font 8\\"
-# bindsym $mod+p exec --no-startup-id "rofi-pass -show run
+bindsym $mod+d exec --no-startup-id "rofi -show run -font \\"Cousine Nerd Font 8\\"
+bindsym $mod+w exec --no-startup-id /usr/local/bin/i3_switch_workspace.sh
 #####################################################################################################################
 #################                          dmenu shortcuts                                          #################
 #####################################################################################################################
@@ -424,7 +422,7 @@ font pango:Cousine Nerd Font Regular 8
 #assign [class="Vlc|vlc"]                                                            → 6
 
 # Workspace 7 video
-# assign [class="mpv|vlc"] 				                                                   	    → $ws7
+assign [class="mpv|vlc"] 				                                                   	    → $ws7
 
 # Workspace 8 Music
 # assign [class="moc"]                                                                  → 8
@@ -515,7 +513,7 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 #feh sets wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/0074.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/nord.jpg
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
@@ -1018,13 +1016,13 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
     # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #B48EAD #B48EAD #B48EAD #B48EAD
+    client.focused          #88C0D0 #88C0D0 #88C0D0 #88C0D0
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222
     client.placeholder      #222222 #222222 #aaaaaa #222222
-    client.urgent           #B48EAD #B48EAD #B48EAD #B48EAD
+    client.urgent           #88C0D0 #88C0D0 #88C0D0 #88C0D0
 
-    client.background       #f5b856
+#    client.background       #f5b856
 
     ##STOP THEMING WM
 
