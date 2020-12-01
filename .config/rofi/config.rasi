@@ -1,7 +1,7 @@
 configuration {
-modi: "run,drun";
+modi: "run";
 font: "Cousine Nerd Font 8";
-width: 			790;
+width: 		  890;
 lines: 			12;
 show-match: 		false;
 separator-style: 	"solid";
@@ -21,4 +21,4 @@ kb-mode-previous:  "Shift+Left,Control+Shift+Tab,Control+h";
 kb-remove-char-back: "BackSpace";
 }
 
-@import "./themes/nord-2.rasi"
+@import "/home/stefan/.config/rofi/themes/nord-2.rasi"

@@ -1531,9 +1531,9 @@ label = %percentage_used%%
 
 format = Mem <label>
 format-prefix = "  "
-format-prefix-foreground = #81A1C1
+format-prefix-foreground = #88C0D0
 ; format-underline = #3384d0
-format-foreground = #81A1C1
+format-foreground = #88C0D0
 format-background = ${colors.background}
 
 ################################################################################
