@@ -19,9 +19,6 @@
 # Tab = TAB key[colors]
 # background = rgba(46, 52, 64, 0.95)
 
-
-
-#####################################################################################################################
 #################                          Define the $mod variable/key                             #################
 #####################################################################################################################
 
@@ -70,7 +67,7 @@ set $right m
 #exec --no-startup-id xrandr --output DVI-I-0 --right-of HDMI-0 --auto
 #exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
 #exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
-exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
+#exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
 
 
 # my current setup
@@ -88,18 +85,18 @@ exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
 #set $firstMonitor DVI-I-1
 #set $secondMonitor DVI-D-1
 
-set $firstMonitor eDP1
-set $secondMonitor HDMI1
+set $secondMonitor eDP1
+set $firstMonitor HDMI1
 
 workspace 1 output $firstMonitor
 workspace 2 output $firstMonitor
 workspace 3 output $firstMonitor
 workspace 4 output $firstMonitor
 workspace 5 output $firstMonitor
-workspace 6 output $secondMonitor
-workspace 7 output $secondMonitor
-workspace 8 output $secondMonitor
-workspace 9 output $secondMonitor
+workspace 6 output $firstMonitor
+workspace 7 output $firstMonitor
+workspace 8 output $firstMonitor
+workspace 9 output $firstMonitor
 workspace 10 output $secondMonitor
 
 set $ws1 1:www
@@ -425,7 +422,7 @@ font pango:Cousine Nerd Font Regular 8
 #assign [class="Vlc|vlc"]                                                            → 6
 
 # Workspace 7 video
-# assign [class="mpv|vlc"] 				                                                   	    → $ws7
+assign [class="mpv|vlc"] 				                                                   	    → $ws7
 
 # Workspace 8 Music
 # assign [class="moc"]                                                                  → 8
@@ -516,7 +513,7 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 #feh sets wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/nord.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/gruvbox.jpg
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
@@ -1019,11 +1016,11 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
     # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #88C0D0 #88C0D0 #88C0D0 #88C0D0
+    client.focused          #8ec07c #8ec07c #8ec07c #8ec07c
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222
     client.placeholder      #222222 #222222 #aaaaaa #222222
-    client.urgent           #88C0D0 #88C0D0 #88C0D0 #88C0D0
+    client.urgent           #8ec07c #8ec07c #8ec07c #8ec07c
 
 #    client.background       #f5b856
 

@@ -40,7 +40,7 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #2E3440
+background = #282828
 foreground = #f3f4f5
 alert = #D08770
 volume-min = #a3be8c
@@ -996,7 +996,7 @@ label-mode-background = #FFBB00
 label-focused = %icon% %name%
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
-label-focused-underline = #88C0D0
+label-focused-underline = #8ec07c
 label-focused-padding = 2
 
 ; Available tokens:
@@ -1114,10 +1114,10 @@ type = custom/script
 exec = ~/.config/polybar/scripts/check-all-updates.sh
 interval = 1000
 label = Updates: %output%
-format-foreground = #B48EAD
+format-foreground = #d3869b
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #B48EAD
+format-prefix-foreground = #d3869b
 ; format-underline = #FFBB00
 
 
@@ -1284,10 +1284,10 @@ type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 1
-format-foreground = #D08770
+format-foreground = #d65d0e
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #D08770
+format-prefix-foreground = #d65d0e
 ; format-underline = #cd1f3f
 
 label-font = 3
@@ -1321,9 +1321,9 @@ date-alt = " %d-%m-%Y"
 time = %H:%M
 time-alt = %H:%M
 format-prefix = " "
-format-prefix-foreground = #EBCB8B
+format-prefix-foreground = #fabd2f
 ; format-underline = #c1941a
-format-foreground = #EBCB8B
+format-foreground = #fabd2f
 format-background = ${colors.background}
 label = %date% %time%
 
@@ -1449,10 +1449,10 @@ exec = uname -r
 tail = false
 interval = 1024
 
-format-foreground = #A3BE8C
+format-foreground = #8ec07c
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #A3BE8C
+format-prefix-foreground = #8ec07c
 ; format-underline = #0084FF
 
 ################################################################################
@@ -1531,9 +1531,9 @@ label = %percentage_used%%
 
 format = Mem <label>
 format-prefix = "  "
-format-prefix-foreground = #88C0D0
+format-prefix-foreground = #83a598
 ; format-underline = #3384d0
-format-foreground = #88C0D0
+format-foreground = #83a598
 format-background = ${colors.background}
 
 ################################################################################

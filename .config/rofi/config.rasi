@@ -1,8 +1,8 @@
 configuration {
-modi: "run";
+modi: "run,drun";
 font: "Cousine Nerd Font 8";
 width: 		  890;
-lines: 			12;
+lines: 			18;
 show-match: 		false;
 separator-style: 	"solid";
 side-scrollbar: 	true;
@@ -21,4 +21,4 @@ kb-mode-previous:  "Shift+Left,Control+Shift+Tab,Control+h";
 kb-remove-char-back: "BackSpace";
 }
 
-@import "/home/stefan/.config/rofi/themes/nord-2.rasi"
+@import "~/.config/rofi/themes/gruvbox-dark-hard.rasi"
