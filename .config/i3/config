@@ -172,6 +172,8 @@ bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto San
 
 # start rofi small
 bindsym $mod+d exec --no-startup-id rofi -show run   $HOME/.config/rofi/config.rasi
+bindsym $mod+space exec ~/.local/bin/i3wins 
+bindsym mod1+l exec  ~/bin/lpass.sh copy
 # bindsym $mod+d exec --no-startup-id "rofi -show run -font \\"Cousine Nerd Font 8\\"
 # bindsym $mod+w exec --no-startup-id /usr/local/bin/i3_switch_workspace.sh
 # bindsym $mod+p exec --no-startup-id ~/Documents/github/scripts/power.sh
@@ -192,8 +194,6 @@ bindsym $mod+d exec --no-startup-id rofi -show run   $HOME/.config/rofi/config.r
 #####################################################################################################################
 bindsym $mod+Shift+q exec --no-startup-id qutebrowser
 # bindsym ctrl+a exec ~/Documents/scripts/todo-dmenu -i -l 15 -i -fn "Arial-8" -nb "#2E3440" -nf "#D08770" -sb "#8FBCBB"
-
-
 
 #####################################################################################################################
 #################                          how to exit, logoff, suspend, ...                        #################
@@ -291,9 +291,9 @@ bindsym $mod+Shift+Right move right
 
 # next/previous workspace
 
-bindsym Mod1+Tab workspace next
-bindsym Mod1+Shift+Tab workspace prev
-bindsym $mod+Tab workspace back_and_forth
+# bindsym Mod1+Tab workspace next
+# bindsym Mod1+Shift+Tab workspace prev
+# bindsym $mod+Tab workspace back_and_forth
 
 #navigate workspaces next / previous
 bindsym Mod1+Ctrl+Right workspace next
@@ -331,7 +331,7 @@ bindsym $mod+e layout toggle split
 
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+shift+t focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent

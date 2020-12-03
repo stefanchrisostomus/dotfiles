@@ -324,7 +324,7 @@ config.bind("xa", "spawn --userscript youtube_mp3_downloader.sh")
 config.bind("Xa", "hint links userscript youtube_mp3_downloader.sh")
 config.bind("xv", "spawn --userscript youtube_downloader.sh")
 config.bind("Xv", "hint links userscript youtube_downloader.sh")
-
+config.bind('<Ctrl-Shift-p>', 'spawn --userscript password_fill')
 
 c.auto_save.session = True
 
