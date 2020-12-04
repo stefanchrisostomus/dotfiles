@@ -325,6 +325,7 @@ config.bind("Xa", "hint links userscript youtube_mp3_downloader.sh")
 config.bind("xv", "spawn --userscript youtube_downloader.sh")
 config.bind("Xv", "hint links userscript youtube_downloader.sh")
 config.bind('<Ctrl-Shift-p>', 'spawn --userscript password_fill')
+config.bind('zp', 'hint links spawn ~/bin/ytdlp {hint-url} ~/Downloads/qbdownloads')
 
 c.auto_save.session = True
 
@@ -342,8 +343,18 @@ c.content.autoplay = True
 ## file, or a file   named `hosts` (with any extension).
 ## Type: List of Url
 c.content.host_blocking.lists = ['https://www.malwaredomainlist.com/hostslist/hosts.txt', 'http://someonewhocares.org/hosts/hosts', 'http://winhelp2002.mvps.org/hosts.zip', 'http://malwaredomains.lehigh.edu/files/justdomains.zip', '    https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext']
+c.content.host_blocking.whitelist = ["thepiratebay.org"]
+c.content.host_blocking.whitelist = ["google.com"]
 c.tabs.new_position.related = "next"
 c.content.webgl = False
 c.completion.show = "always"
 c.content.javascript.can_open_tabs_automatically
 c.content.javascript.enabled = True
+
+# search engine shortneners
+# c.url.searchengines = {
+# "qwant": "https://www.qwant.com/?q={}",
+# "wiki": "https://en.wikipedia.org/w/index.php?search={}",
+# "dic": "http://www.dictionary.com/browse/{}",
+# "ddgi": "https://duckduckgo.com/?q={}&iar=images",
+#       }
