@@ -28,7 +28,7 @@
 # Mod1 = Alt key on keyboard
 
 #Set Alt key
-#set $mod Mod1
+# set $mod Mod1
 
 #set Super key
 set $mod Mod4
@@ -99,16 +99,16 @@ workspace 8 output $firstMonitor
 workspace 9 output $firstMonitor
 workspace 10 output $secondMonitor
 
-set $ws1 1:www
-set $ws2 2:files
-set $ws3 3:dev
-set $ws4 4:man
-set $ws5 5:notes
-set $ws6 6:sys
-set $ws7 7:vid
-set $ws8 8:mus
-set $ws9 9:cal
-set $ws10 10:mail
+set $ws1 1:[www]
+set $ws2 2:[files]
+set $ws3 3:[dev]
+set $ws4 4:[man]
+set $ws5 5:[notes]
+set $ws6 6:[sys]
+set $ws7 7:[vid]
+set $ws8 8:[mus]
+set $ws9 9:[cal]
+set $ws10 10:[mail]
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -157,8 +157,8 @@ for_window [class="mpv"] focus
 
 # start dmenu
 # bindsym $mod+d exec --no-startup-id dmenu_run -i -h 24 -nb '#2E3440' -nf '#D08770' -sb '#8FBCBB' -sf '#191919'  -fn 'CousineNerdFontRegular:bold:pixelsize=10'
-# bindsym $mod+d exec --no-startup-id dmenu_run -bw 2 -h 18 -i  -c  -l 20  -nb '#2E3440' -nf '#D08770' -sb '#88C0D0' -sf '#191919' -fn 'CousineNerdFontRegular:pixelsize=10'
-#  bindsym $mod+d exec --no-startup-id dmenu_run  -fn 'CousineNerdFontRegular:pixelsize=11'
+# bindsym $mod+d exec --no-startup-id dmenu_run -h 18  -nb '#2E3440' -nf '#D08770' -sb '#88C0D0' -sf '#191919' -fn 'CousineNerdFontRegular:pixelsize=10'
+# bindsym $mod+d exec --no-startup-id dmenu_run  -fn 'CousineNerdFontRegular:pixelsize=11'
 # bindsym $mod+d exec --no-startup-id dmenu_run
 
 # gmrun
@@ -171,8 +171,9 @@ bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
 bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
 
 # start rofi small
-bindsym $mod+d exec --no-startup-id rofi -show run   $HOME/.config/rofi/config.rasi
-bindsym $mod+space exec ~/.local/bin/i3wins 
+bindsym $mod+d exec --no-startup-id rofi -show run   $HOME/.config/rofi/config.asi
+bindsym mod1+space exec  ~/.config/rofi/launchers/rofi-bangs
+bindsym $mod+space exec ~/.local/bin/i3wins
 bindsym mod1+l exec  ~/bin/lpass.sh copy
 # bindsym $mod+d exec --no-startup-id "rofi -show run -font \\"Cousine Nerd Font 8\\"
 # bindsym $mod+w exec --no-startup-id /usr/local/bin/i3_switch_workspace.sh
@@ -291,13 +292,13 @@ bindsym $mod+Shift+Right move right
 
 # next/previous workspace
 
-# bindsym Mod1+Tab workspace next
+bindsym Mod1+Tab workspace next
 # bindsym Mod1+Shift+Tab workspace prev
-# bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Tab workspace back_and_forth
 
 #navigate workspaces next / previous
-bindsym Mod1+Ctrl+Right workspace next
-bindsym Mod1+Ctrl+Left workspace prev
+bindsym Mod1+n workspace next
+bindsym Mod1+p workspace prev
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -422,7 +423,7 @@ font pango:Cousine Nerd Font Regular 8
 #assign [class="Vlc|vlc"]                                                            → 6
 
 # Workspace 7 video
-assign [class="mpv|vlc"] 				                                                   	    → $ws7
+# assign [class="mpv|vlc"] 				                                                   	    → $ws7
 
 # Workspace 8 Music
 # assign [class="moc"]                                                                  → 8
@@ -513,15 +514,17 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 #feh sets wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/gruvbox.jpg
+exec_always --no-startup-id  ~/.fehbg
 #Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
+
+exec_always --no-startup-id mbpfan
 
 #####################################################################################################################
 #################                                 system applications                               #################
 #####################################################################################################################
 
- exec --no-startup-id xfce4-power-manager &
+exec --no-startup-id xfce4-power-manager &
 # ommitted next line to get super key to bring up the menu in xfce and avoid error then in i3
 # IF xfsettingsd is activated you can not change themes
 #exec --no-startup-id xfsettingsd &
@@ -644,7 +647,7 @@ bindsym control+mod1+s exec --no-startup-id spotify;focus
 #####################################################################################################################
 
 
-bindsym mod1+p exec --no-startup-id scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+bindsym mod1+s exec --no-startup-id scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
 # bindsym mod1+Control+p exec --no-startup-id xfce4-screenshooter
 bindsym mod1+r exec --no-startup-id gnome-screenshot -i
 #bindsym shift+Print exec --no-startup-id shutter
@@ -765,26 +768,36 @@ bindsym mod1+Shift+u exec --no-startup-id wal -i $(cat $HOME/.config/variety/wal
 #####################################################################################################################
 
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
-bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
-#https://github.com/acrisci/playerctl/
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-bindsym XF86AudioStop exec --no-startup-id playerctl stop
-#bindsym XF86AudioPlay exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-#bindsym XF86AudioNext exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-#bindsym XF86AudioPrev exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-#bindsym XF86AudioStop exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+# sound control / multimedia hotkey / internet hotkey
+# https://github.com/redhat69/dotfiles/blob/master/.i3/config
+# bindsym XF86AudioPlay exec cmus-remote -u
+# bindsym XF86HomePage exec chromium http://youtube.com
+# bindsym XF86Mail exec chromium https://mail.google.com
+# bindsym grave exec /media/Suiton/Public/dotfiles/apps/.scripts/any_term_dropdown.sh
+
+# pulseaudio volume control
+# https://faq.i3wm.org/question/125/how-to-change-the-systems-volume/?answer=4803#post-id-4803
+set $sink `pactl list short sinks | grep RUNNING | cut -f1`
+bindsym Ctrl+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink -- +10%
+bindsym Ctrl+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -- -10%
+bindsym Ctrl+XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle
+
+# alsa volume control
+# https://faq.i3wm.org/question/125/how-to-change-the-systems-volume/?answer=249#post-id-249
+# bug in alsa; mute works but unmute does not
+# https://bugs.launchpad.net/ubuntu/+source/alsa-utils/+bug/1026331
+# bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ -q
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- -q
+bindsym XF86AudioMute exec amixer -D pulse set Master Playback Switch toggle
 
 
 #####################################################################################################################
 #################                          xbacklight                                               #################
 #####################################################################################################################
 
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5% # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 6% # decrease screen brightness
 
 
 
@@ -998,9 +1011,9 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
     # variable border background Text
 
 #    colors {
-#       background #2F2F2F
+#      background #2F2F2F
 #        statusline #eeeeee
-#        separator  #666666#
+#        separator  #666666
 #        # colorclass           border  backgr. text
 #        focused_workspace     #a9a9a9 #5f676a #eeeeee
 #        active_workspace      #a9a9a9 #5f676a #eeeeee
@@ -1011,11 +1024,11 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 #    }
 
     ##STOP THEMING BAR
-    ##START THEMING WM
-    #Theme name : ArcoLinux Default
+#   START THEMING WM
+#   Theme name : ArcoLinux Default
 
     # Window color settings
-    # class                 border  backgr. text    indicator
+#     class                 border  backgr. text    indicator
     client.focused          #8ec07c #8ec07c #8ec07c #8ec07c
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222

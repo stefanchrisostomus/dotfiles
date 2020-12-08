@@ -7,7 +7,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$PATH:$HOME/.local/bin"
 fi
 
-export FZF_BASE="$HOME/.fzf"
+# export FZF_BASE="$HOME/.fzf"
 
 
 # Path to your oh-my-zsh installation.
@@ -17,13 +17,14 @@ export ZSH="/home/stefan/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="aussiegeek"
+ZSH_THEME=""
 
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-
 setopt autocd		# Automatically cd into typed directory.
+setopt interactive_comments
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -48,7 +49,7 @@ setopt autocd		# Automatically cd into typed directory.
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -83,10 +84,9 @@ setopt autocd		# Automatically cd into typed directory.
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting  )
 
 source $ZSH/oh-my-zsh.sh
-source ~/.dotfiles/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 # User configuration
 
@@ -128,6 +128,7 @@ alias cf='cd /home/stefan/.config'
 alias lg='lazygit'
 alias wl 'cd ~/Pictures/Wallpapers'
 alias rr='. ranger'
+alias svim='vim -u ~/.SpaceVim/vimrc'
 
 # Aliases for software managment
 # pacman or pm
@@ -159,7 +160,7 @@ alias ll='exa -l --color=always --icons  --group-directories-first'  # long form
 alias lt='exa -aT --color=always --icons  --group-directories-first' # tree listing
 
 ### RANDOM COLOR SCRIPT ###
-/opt/shell-color-scripts/colorscript.sh -e elfman 
+/opt/shell-color-scripts/colorscript.sh -e elfman
 
 
 export EDITOR=vim
@@ -178,18 +179,68 @@ function reload(){
        source ~/.zshrc
    }
 
- if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
-
-export VISUAL=vim
-export PAGER=more
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+
+
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    echo -ne "\e[5 q"
+}
+zle -N zle-line-init
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp" >/dev/null
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' 'lfcd\n'
+
+bindkey -s '^a' 'bc -lq\n'
+
+bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+
+bindkey '^[[P' delete-char
+
+eval "$(starship init zsh)"

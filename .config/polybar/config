@@ -120,7 +120,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = i3
 modules-center =
-modules-right = kernel memory2 cpu2 arch-aur-updates date
+modules-right = kernel memory2 cpu2 arch-aur-updates  date
 
 separator = |
 
@@ -995,8 +995,8 @@ label-mode-background = #FFBB00
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
 label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.foreground}
-label-focused-underline = #8ec07c
+label-focused-foreground = #8ec07c  
+# label-focused-underline = #8ec07c
 label-focused-padding = 2
 
 ; Available tokens:

@@ -22,7 +22,7 @@
     statusline_iseparator = "arrow"
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
-    enable_statusline_mode = false
+    enable_statusline_mode = true
 
 # Choose file manager
 #[options]
@@ -44,14 +44,10 @@ name = 'shell'
 default_position = 'top'
 default_height = 30
 
-[[layers]]
-  name = "sudo"
 
-[[layers]]
-  name = "autocomplete"
-  
-[[layers]]
-  name = "colorhighlight"
+
+# [[layers]]
+#  name = "colorhighlight"
 
 # custom plugins {{{
 [[custom_plugins]]
@@ -64,9 +60,6 @@ merged = 0
   merged = 0
 
 
-[[custom_plugins]]
-  repo = "oblitum/youcompleteme"
-  merged = 0
 
 [[custom_plugins]]
     repo = "lilydjwg/colorizer"
@@ -82,6 +75,3 @@ merged = 0
 
 g:spacevim_enable_colorizer = 0
 g:spacevim_enable_vim-css-color = 0
-g:choosewin_overlay_enable = 1
-g:ranger_map_keys = 0
-enable_vimfiler_gitstatus = true
