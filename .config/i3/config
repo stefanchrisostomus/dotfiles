@@ -423,7 +423,7 @@ font pango:Cousine Nerd Font Regular 8
 #assign [class="Vlc|vlc"]                                                            → 6
 
 # Workspace 7 video
-# assign [class="mpv|vlc"] 				                                                   	    → $ws7
+assign [class="mpv|vlc"] 				                                                   	    → $ws7
 
 # Workspace 8 Music
 # assign [class="moc"]                                                                  → 8
@@ -922,6 +922,7 @@ exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
+
 #####################################################################################################################
 #####################################################################################################################
 #####################################################################################################################
@@ -1029,11 +1030,11 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
     # Window color settings
 #     class                 border  backgr. text    indicator
-    client.focused          #8ec07c #8ec07c #8ec07c #8ec07c
+    client.focused          #B48EAD #B48EAD #B48EAD #B48EAD
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222
     client.placeholder      #222222 #222222 #aaaaaa #222222
-    client.urgent           #8ec07c #8ec07c #8ec07c #8ec07c
+    client.urgent           #B48EAD #B48EAD #B48EAD #B48EAD
 
 #    client.background       #f5b856
 

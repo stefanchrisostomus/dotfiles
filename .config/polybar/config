@@ -40,7 +40,7 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #282828
+background = #2E3440
 foreground = #f3f4f5
 alert = #D08770
 volume-min = #a3be8c
@@ -111,6 +111,7 @@ padding-right = 1
 
 module-margin-left = 3
 module-margin-right = 3
+
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
@@ -995,7 +996,7 @@ label-mode-background = #FFBB00
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
 label-focused-background = ${colors.background}
-label-focused-foreground = #8ec07c  
+label-focused-foreground = #B48EAD
 # label-focused-underline = #8ec07c
 label-focused-padding = 2
 
@@ -1114,10 +1115,10 @@ type = custom/script
 exec = ~/.config/polybar/scripts/check-all-updates.sh
 interval = 1000
 label = Updates: %output%
-format-foreground = #d3869b
+format-foreground = #B48EAD
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #d3869b
+format-prefix-foreground = #B48EAD
 ; format-underline = #FFBB00
 
 
@@ -1284,10 +1285,10 @@ type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 1
-format-foreground = #d65d0e
+format-foreground = #D08770
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #d65d0e
+format-prefix-foreground = #D08770
 ; format-underline = #cd1f3f
 
 label-font = 3
@@ -1321,9 +1322,9 @@ date-alt = " %d-%m-%Y"
 time = %H:%M
 time-alt = %H:%M
 format-prefix = " "
-format-prefix-foreground = #fabd2f
+format-prefix-foreground = #EBCB8B
 ; format-underline = #c1941a
-format-foreground = #fabd2f
+format-foreground = #EBCB8B
 format-background = ${colors.background}
 label = %date% %time%
 
@@ -1449,7 +1450,7 @@ exec = uname -r
 tail = false
 interval = 1024
 
-format-foreground = #8ec07c
+format-foreground = #A3BE8C
 format-background = ${colors.background}
 format-prefix = "  "
 format-prefix-foreground = #8ec07c
@@ -1531,9 +1532,9 @@ label = %percentage_used%%
 
 format = Mem <label>
 format-prefix = "  "
-format-prefix-foreground = #83a598
+format-prefix-foreground = #8FBCBB
 ; format-underline = #3384d0
-format-foreground = #83a598
+format-foreground = #8FBCBB
 format-background = ${colors.background}
 
 ################################################################################

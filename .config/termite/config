@@ -38,52 +38,51 @@ cursor_shape = block
 scrollbar = off
 
 [colors]
-# Base16 Gruvbox dark, medium
-# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+# Base16 Nord
+# Author: arcticicestudio
 
-foreground          = #d5c4a1
-foreground_bold     = #d5c4a1
-cursor              = #d5c4a1
-cursor_foreground   = #282828
-# background          = #282828
-background          = rgba(40,40,40, 0.97)
+foreground      = #E5E9F0
+foreground_bold = #ECEFF4
+cursor          = #ECEFF4
+background = rgba(40, 42, 54, 0.95)
+# background          = #2E3440
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #282828
-color8  = #665c54
-color7  = #d5c4a1
-color15 = #fbf1c7
+color0  = #2E3440
+color8  = #4C566A
+color7  = #E5E9F0
+color15 = #8FBCBB
 
 # Red
-color1  = #fb4934
-color9  = #fb4934
+color1  = #88C0D0
+color9  = #88C0D0
 
 # Green
-color2  = #b8bb26
-color10 = #b8bb26
+color2  = #BF616A
+color10 = #BF616A
 
 # Yellow
-color3  = #fabd2f
-color11 = #fabd2f
+color3  = #5E81AC
+color11 = #5E81AC
 
 # Blue
-color4  = #83a598
-color12 = #83a598
+color4  = #EBCB8B
+color12 = #EBCB8B
 
 # Purple
-color5  = #d3869b
-color13 = #d3869b
+color5  = #A3BE8C
+color13 = #A3BE8C
 
 # Teal
-color6  = #8ec07c
-color14 = #8ec07c
+color6  = #D08770
+color14 = #D08770
 
 # Extra colors
-color16 = #fe8019
-color17 = #d65d0e
-color18 = #3c3836
-color19 = #504945
-color20 = #bdae93
-color21 = #ebdbb2
+color16 = #81A1C1
+color17 = #B48EAD
+color18 = #3B4252
+color19 = #434C5E
+color20 = #D8DEE9
+color21 = #ECEFF4

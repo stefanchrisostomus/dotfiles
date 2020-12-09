@@ -11,7 +11,7 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "gruvbox"
+    colorscheme = "nord"
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
@@ -62,16 +62,23 @@ merged = 0
 
 
 [[custom_plugins]]
-    repo = "lilydjwg/colorizer"
-    merged = false
+  repo = "lilydjwg/colorizer"
+   merged = false
 
-[[custom_plugins]]
-    repo = "skammer/vim-css-color"
-    merged = false
 
 [[custom_plugins]]
     repo = "francoiscabrol/ranger.vim"
     merged = false
 
-g:spacevim_enable_colorizer = 0
-g:spacevim_enable_vim-css-color = 0
+[[custom_plugins]]
+  repo = "oblitum/youcompleteme"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "neoclide/coc.nvim"
+  merged = 0
+
+
+[[custom_plugins]]
+    repo = "norcalli/nvim-colorizer.lua"
+    merged = false

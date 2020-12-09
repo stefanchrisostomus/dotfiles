@@ -49,7 +49,7 @@ setopt interactive_comments
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-DISABLE_MAGIC_FUNCTIONS="true"
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -126,9 +126,8 @@ alias wiki='vim /home/stefan/Documents/github/vimwiki/index.wiki'
 alias do='cd ~/Downloads'
 alias cf='cd /home/stefan/.config'
 alias lg='lazygit'
-alias wl 'cd ~/Pictures/Wallpapers'
+alias wl 'cd ~/Pictures/wallpapers'
 alias rr='. ranger'
-alias svim='vim -u ~/.SpaceVim/vimrc'
 
 # Aliases for software managment
 # pacman or pm
@@ -148,7 +147,8 @@ alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | n
 alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 #receive the key of a developer
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
-
+# export GPGKEY=6A6EDCC175DBA252
+#
 #shutdown or reboot
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
@@ -225,22 +225,6 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp" >/dev/null
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'lfcd\n'
 
-bindkey -s '^a' 'bc -lq\n'
+ eval "$(starship init zsh)"
 
-bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
-
-bindkey '^[[P' delete-char
-
-eval "$(starship init zsh)"
