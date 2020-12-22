@@ -41,11 +41,12 @@ scrollbar = off
 # Base16 Nord
 # Author: arcticicestudio
 
-foreground      = #E5E9F0
-foreground_bold = #ECEFF4
-cursor          = #ECEFF4
-background = rgba(40, 42, 54, 0.95)
+foreground          = #E5E9F0
+foreground_bold     = #E5E9F0
+cursor              = #E5E9F0
+cursor_foreground   = #2E3440
 # background          = #2E3440
+background          = rgba(46, 52, 64, 0.95)
 
 # 16 color space
 

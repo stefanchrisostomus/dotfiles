@@ -308,8 +308,6 @@ c.colors.tabs.selected.even.bg = base02
 # color).
 # c.colors.webpage.bg = base00
 
-
-
 ## Keybindings
 ## Bindings for normal mode
 ##config.bind(",M": "hint links spawn  /home/stefan/.config/qutebrowser/umpv  {hint-url}")

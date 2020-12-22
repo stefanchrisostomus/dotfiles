@@ -115,7 +115,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # My Aliases
-alias c='clear && /opt/shell-color-scripts/colorscript.sh -e elfman'
+alias c='clear && colorscript random'
 alias speed='speedtest-cli'
 alias home='cd /home/stefan/'
 alias dk='cd /home/stefan/Desktop/'
@@ -126,7 +126,7 @@ alias wiki='vim /home/stefan/Documents/github/vimwiki/index.wiki'
 alias do='cd ~/Downloads'
 alias cf='cd /home/stefan/.config'
 alias lg='lazygit'
-alias wl 'cd ~/Pictures/wallpapers'
+alias wl='cd ~/Pictures/Wallpapers'
 alias rr='. ranger'
 
 # Aliases for software managment
@@ -160,8 +160,8 @@ alias ll='exa -l --color=always --icons  --group-directories-first'  # long form
 alias lt='exa -aT --color=always --icons  --group-directories-first' # tree listing
 
 ### RANDOM COLOR SCRIPT ###
-/opt/shell-color-scripts/colorscript.sh -e elfman
-
+colorscript random
+# pfetch 
 
 export EDITOR=vim
 
@@ -226,5 +226,5 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 
- eval "$(starship init zsh)"
+#  eval "$(starship init zsh)"
 

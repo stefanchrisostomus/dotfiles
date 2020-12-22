@@ -1453,7 +1453,7 @@ interval = 1024
 format-foreground = #A3BE8C
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #8ec07c
+format-prefix-foreground = #A3BE8C
 ; format-underline = #0084FF
 
 ################################################################################
@@ -1532,9 +1532,9 @@ label = %percentage_used%%
 
 format = Mem <label>
 format-prefix = "  "
-format-prefix-foreground = #8FBCBB
+format-prefix-foreground = #81A1C1
 ; format-underline = #3384d0
-format-foreground = #8FBCBB
+format-foreground = #81A1C1
 format-background = ${colors.background}
 
 ################################################################################

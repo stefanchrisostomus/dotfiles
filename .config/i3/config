@@ -193,7 +193,7 @@ bindsym mod1+l exec  ~/bin/lpass.sh copy
 #################                           App shortcuts                                           #################
 #
 #####################################################################################################################
-bindsym $mod+Shift+q exec --no-startup-id qutebrowser
+bindsym $mod+w exec --no-startup-id qutebrowser
 # bindsym ctrl+a exec ~/Documents/scripts/todo-dmenu -i -l 15 -i -fn "Arial-8" -nb "#2E3440" -nf "#D08770" -sb "#8FBCBB"
 
 #####################################################################################################################
