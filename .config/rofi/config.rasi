@@ -19,4 +19,4 @@ kb-mode-previous:  "Shift+Left,Control+Shift+Tab,Control+h";
 kb-remove-char-back: "BackSpace";
 }
 
-@import "/home/stefan/.config/rofi/themes/nord-2.rasi"
+@import "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"

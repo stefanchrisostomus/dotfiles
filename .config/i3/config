@@ -1030,11 +1030,11 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
     # Window color settings
 #     class                 border  backgr. text    indicator
-    client.focused          #B48EAD #B48EAD #B48EAD #B48EAD
+    client.focused          #83a598 #83a598 #83a598 #83a598
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222
     client.placeholder      #222222 #222222 #aaaaaa #222222
-    client.urgent           #B48EAD #B48EAD #B48EAD #B48EAD
+    client.urgent           #83a598 #83a598 #83a598 #83a598
 
 #    client.background       #f5b856
 
