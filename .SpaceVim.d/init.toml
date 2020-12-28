@@ -11,7 +11,7 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "nord"
+    colorscheme = "gruvbox"
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
@@ -22,15 +22,7 @@
     statusline_iseparator = "arrow"
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
-    enable_statusline_mode = true
-
-# Choose file manager
-#[options]
-    # file manager plugins supported in SpaceVim:
-    # - vimfiler (default)
-    # - nerdtree
-    # - defx
-    filemanager = "vimfiler"
+    enable_statusline_mode = false
 
 # Enable autocomplete layer
 [[layers]]
@@ -44,11 +36,6 @@ name = 'shell'
 default_position = 'top'
 default_height = 30
 
-
-
-# [[layers]]
-#  name = "colorhighlight"
-
 # custom plugins {{{
 [[custom_plugins]]
 name = 'vimwiki/vimwiki'
@@ -56,29 +43,29 @@ merged = 0
 # }}}
 
 [[custom_plugins]]
-  repo = "arcticicestudio/nord-vim"
-  merged = 0
+repo = "arcticicestudio/nord-vim"
+merged = 0
 
+[[custom_plugins]]
+repo = "lilydjwg/colorizer"
+merged = false
+
+[[custom_plugins]]
+repo = "oblitum/youcompleteme"
+ merged = 0
 
 
 [[custom_plugins]]
-  repo = "lilydjwg/colorizer"
-   merged = false
+repo = "PotatoesMaster/i3-vim-syntax"
+ merged = 0
 
 
 [[custom_plugins]]
-    repo = "francoiscabrol/ranger.vim"
-    merged = false
-
-[[custom_plugins]]
-  repo = "oblitum/youcompleteme"
-  merged = 0
-
-[[custom_plugins]]
-  repo = "neoclide/coc.nvim"
-  merged = 0
+repo = "dracula/vim"
+ merged = 0
 
 
 [[custom_plugins]]
-    repo = "norcalli/nvim-colorizer.lua"
-    merged = false
+repo = "colepeters/spacemacs-theme.vim"
+ merged = 0
+

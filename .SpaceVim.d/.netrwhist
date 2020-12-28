@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
-let g:netrw_dirhist_4='/home/stefan/Documents/github/dotfiles/.config/rofi/themes'
-let g:netrw_dirhist_3='/home/stefan/.cache/vimfiles/repos/github.com/rrethy/vim-hexokinase'
-let g:netrw_dirhist_2='/home/stefan/Documents/github/dotfiles/.config/rofi/themes'
-let g:netrw_dirhist_1='/home/stefan/.zprofile'

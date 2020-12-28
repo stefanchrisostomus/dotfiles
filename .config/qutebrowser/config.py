@@ -12,23 +12,23 @@ config.load_autoconfig()
 
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova
-# Gruvbox dark, medium scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+# Gruvbox dark, pale scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-base00 = "#282828"
-base01 = "#3c3836"
-base02 = "#504945"
-base03 = "#665c54"
-base04 = "#bdae93"
-base05 = "#d5c4a1"
-base06 = "#ebdbb2"
-base07 = "#fbf1c7"
-base08 = "#fb4934"
-base09 = "#fe8019"
-base0A = "#fabd2f"
-base0B = "#b8bb26"
-base0C = "#8ec07c"
-base0D = "#83a598"
-base0E = "#d3869b"
+base00 = "#262626"
+base01 = "#3a3a3a"
+base02 = "#4e4e4e"
+base03 = "#8a8a8a"
+base04 = "#949494"
+base05 = "#dab997"
+base06 = "#d5c4a1"
+base07 = "#ebdbb2"
+base08 = "#d75f5f"
+base09 = "#ff8700"
+base0A = "#ffaf00"
+base0B = "#afaf00"
+base0C = "#85ad85"
+base0D = "#83adad"
+base0E = "#d485ad"
 base0F = "#d65d0e"
 
 # set qutebrowser colors
@@ -307,7 +307,6 @@ c.colors.tabs.selected.even.bg = base02
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # c.colors.webpage.bg = base00
-
 ## Keybindings
 ## Bindings for normal mode
 ##config.bind(",M": "hint links spawn  /home/stefan/.config/qutebrowser/umpv  {hint-url}")

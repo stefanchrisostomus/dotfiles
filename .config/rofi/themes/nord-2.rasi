@@ -27,7 +27,7 @@
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
     selected-normal-background:  rgba(76, 86, 106, 100%);
-    border-color:                #B48EAD;
+    border-color:                #8FBCBB;
     spacing:                     2;
     separatorcolor:              @blue;
     urgent-background:           @background;

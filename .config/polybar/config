@@ -40,7 +40,7 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #282828
+background = #32302f
 foreground = #f3f4f5
 alert = #D08770
 volume-min = #a3be8c
@@ -996,7 +996,7 @@ label-mode-background = #FFBB00
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
 label-focused-background = ${colors.background}
-label-focused-foreground = #B48EAD
+label-focused-foreground = #8FBCBB
 # label-focused-underline = #8ec07c
 label-focused-padding = 2
 
