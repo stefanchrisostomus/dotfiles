@@ -9,11 +9,11 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'vimwiki/vimwiki'                             " VimWiki
-Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
-Plug 'kovetskiy/sxhkd-vim'                         " sxhkd highlighting
-Plug 'vim-python/python-syntax'                    " Python highlighting
-Plug 'ap/vim-css-color'                            " Color previews for CSS
+Plug 'vimwiki/vimwiki'
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'kovetskiy/sxhkd-vim'
+Plug 'vim-python/python-syntax'
+Plug 'ap/vim-css-color'
 Plug 'Valloric/YouCompleteMe'
 Plug 'chrisbra/colorizer'
 
